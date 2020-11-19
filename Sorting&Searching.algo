@@ -1,0 +1,16 @@
+ALGORITHM Insertion_Sort
+VAR
+    arr : ARRAY_OF INTEGER[100];
+    i,i,key:INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 DO
+        key:=arr[i];
+        j:=i-1;
+        WHILE (j>=0 && key<arr[i]) DO
+            arr[j+1]:=arr[j]
+            j:=j-1;
+            arr[j+1]:=key;
+        END_WHILE
+    END_FOR
+    Write(arr);
+END
